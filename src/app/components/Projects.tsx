@@ -45,7 +45,7 @@ function ProjectLink({
         />
       </a>
       <div
-        className="hidden font-mono text-xs underline print:visible"
+        className="hidden font-sans text-xs underline print:visible"
         aria-hidden="true"
       >
         {link.replace("https://", "").replace("www.", "").replace("/", "")}
@@ -109,7 +109,7 @@ function ProjectCard({
             <ProjectLink title={title} link={link} />
           </CardTitle>
           <CardDescription
-            className="text-pretty font-mono text-xs print:text-[10px]"
+            className="text-pretty font-sans text-xs print:text-[10px]"
             aria-label="Project description"
           >
             {description}

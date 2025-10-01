@@ -1,236 +1,214 @@
 import type { ResumeData } from "@/lib/types";
+import midjourneyAvatar from "@/images/midjourney_avatar.jpg";
 
 export const RESUME_DATA: ResumeData = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
-  about: "Full Stack Engineer dedicated to building high-quality products.",
+  name: "Sergey Yakushevich",
+  initials: "SY",
+  location: "Warsaw, Poland",
+  locationLink: "https://www.google.com/maps/place/Warsaw",
+  about: "Software Engineer with 7 years of experience building scalable, reliable applications.",
   summary: (
     <>
-      Full Stack Engineer specializing in high-performance React applications,
-      scalable Node.js services, and real-time collaboration systems.
-      Experienced in technical architecture design and remote team leadership.
+      Senior Software Engineer with 9 years of experience designing and building
+      scalable backend systems and full‑stack web applications. Specialized in Ruby
+      on Rails with deep expertise in PostgreSQL, Redis, Sidekiq, and distributed
+      message brokers (Kafka, RabbitMQ). Skilled at architecting secure APIs
+      (REST/GraphQL), optimizing performance under high‑traffic loads, and leading
+      cloud deployments on AWS. Proven track record delivering production‑ready
+      software across fintech, e‑commerce, and enterprise domains. Collaborative
+      engineer who mentors junior developers and leverages modern JavaScript
+      frameworks (React, Next.js) to deliver impactful end‑to‑end solutions.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: midjourneyAvatar,
+  personalWebsiteUrl: "https://syakushevich.github.io/portfolio",
   contact: {
-    email: "bartosz.jarocki@hey.com",
+    email: "sergeyayya@gmail.com",
     tel: "+48530213401",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/syakushevich",
         icon: "github",
       },
       {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
-        icon: "linkedin",
+        name: "Portfolio",
+        url: "https://syakushevich.github.io/portfolio",
+        icon: "globe",
       },
       {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: "x",
+        name: "LinkedIn",
+        url: "https://linkedin.com/in/sergey-yakushevich-688a4b179/",
+        icon: "linkedin",
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Belarusian State University",
+      degree: "Bachelor of Science in Computer Science",
+      start: "2013",
+      end: "2017",
     },
   ],
   work: [
     {
-      company: "Motion",
-      link: "https://motionapp.com/",
-      badges: ["Remote", "AI", "React", "Next.js", "TypeScript", "AdonisJS"],
-      title: "Senior Software Engineer",
-      start: "2025",
-      end: null,
-      description: (
-        <>
-          Working on internal AI agents platform allowing marketing specialists
-          to create AI workflows.
-        </>
-      ),
-    },
-    {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      start: "2024",
-      end: "2025",
-      description: (
-        <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
-            </li>
-            <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
-            </li>
-            <li>
-              Implementing system-wide monitoring and security improvements
-            </li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Parabol",
-      link: "https://parabol.co",
+      company: "Regate",
+      link: "https://regate.com",
       badges: [
-        "Remote",
+        "Ruby on Rails",
         "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
+        "PostgreSQL",
+        "Kafka",
+        "Docker",
+        "AWS RDS",
+        "ECS",
+        "CI/CD",
+        "Terraform",
       ],
-      title: "Senior Full Stack Developer",
-      start: "2021",
-      end: "2024",
-      description: (
-        <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
-          <ul className="list-inside list-disc">
-            <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
-            </li>
-            <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
-            </li>
-            <li>
-              Open source contributions to Relay DevTools and React i18n tooling
-            </li>
-          </ul>
-        </>
-      ),
+      title: "Senior Ruby on Rails Engineer",
+      start: "Nov 2022",
+      end: "May 2025",
+      description: [
+        "Introduced a Service Layer pattern to simplify model callbacks and improve maintainability.",
+        "Integrated multiple payment and banking APIs, automating accounting processes for a fintech startup.",
+        "Enhanced test coverage with RSpec and reduced error rates using robust monitoring with CloudWatch.",
+        "Added CI/CD automation to spawn new AWS testing environments for each Pull Request, improving workflow and QA efficiency.",
+      ],
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      start: "2015",
-      end: "2021",
-      description: (
-        <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
-          <ul className="list-inside list-disc">
-            <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
-            </li>
-            <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
-            </li>
-            <li>
-              Led development teams across multiple successful client projects
-            </li>
-          </ul>
-        </>
-      ),
+      company: "Aristek Systems",
+      link: "https://aristeksystems.com",
+      badges: [
+        "Ruby on Rails",
+        "React",
+        "PostgreSQL",
+        "Docker",
+        "AWS RDS",
+        "ECS",
+        "Lambda",
+        "CI/CD",
+      ],
+      title: "Software Engineer",
+      start: "Jul 2020",
+      end: "Oct 2022",
+      description: [
+        "Refactored and merged codebases, enabling CI/CD automation and speeding deployments by 50%.",
+        "Scaled a new e‑commerce platform to increase market reach.",
+        "Containerized services with Docker and deployed on AWS ECS to improve scalability.",
+      ],
     },
     {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      start: "2012",
-      end: "2015",
-      description: (
-        <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
-          <ul className="list-inside list-disc">
-            <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
-            </li>
-            <li>Built and mentored high-performing mobile development team</li>
-          </ul>
-        </>
-      ),
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
+      company: "iTransition",
+      link: "https://itransition.com",
+      badges: [
+        "Ruby on Rails",
+        "Elasticsearch",
+        "GraphQL",
+        "MySQL",
+        "Docker",
+        "Kafka",
+        "AWS ECS",
+        "CI/CD",
+      ],
+      title: "Software Engineer",
+      start: "Jan 2016",
+      end: "Jun 2020",
+      description: [
+        "Migrated primary DB from MySQL to Elasticsearch, boosting search performance by 90% for 50M+ users.",
+        "Implemented Kafka to improve communication between microservices.",
+        "Developed GraphQL endpoints and optimized test pipelines 5x, reducing release cycles.",
+      ],
     },
   ],
   skills: [
-    "React/Next.js/Remix",
+    "Ruby",
+    "Ruby on Rails",
+    "JavaScript",
     "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
     "Node.js",
+    "React",
+    "Next.js",
     "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    "PostgreSQL",
+    "MySQL",
+    "Elasticsearch",
+    "Redis",
+    "Sidekiq",
+    "RabbitMQ",
+    "Kafka",
+    "AWS (EC2, RDS, S3, Lambda)",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "CI/CD pipelines (GitHub Actions)",
+    "RSpec",
+    "Minitest",
+    "Cypress",
+    "Git",
+    "Agile/Scrum",
+    "API Design (REST & GraphQL)",
+    "Authentication/Authorization (JWT, OAuth2)",
+    "Event-Driven Systems",
+    "Microservices",
   ],
   projects: [
     {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
-      description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Consultly",
+      title: "Regate",
       techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
+        "Ruby on Rails",
+        "React",
         "PostgreSQL",
-        "Redis",
+        "Kafka",
+        "Docker",
+        "AWS RDS",
+        "ECS",
+        "CI/CD",
+        "Terraform",
       ],
       description:
-        "Platform for online consultations with real-time video meetings and scheduling",
+        "Fintech platform. Built scalable Rails services, integrated banking APIs, added CI/CD automation to spin up AWS test environments for PRs.",
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "regate.com",
+        href: "https://regate.com",
       },
     },
     {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
+      title: "Aristek Systems",
+      techStack: [
+        "Ruby on Rails",
+        "React",
+        "PostgreSQL",
+        "Docker",
+        "AWS RDS",
+        "ECS",
+        "Lambda",
+        "CI/CD",
+      ],
       description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
+        "E-commerce platform. Scaled services, migrated to Dockerized microservices on AWS ECS, and improved operational efficiency with CI/CD pipelines.",
       link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
+        label: "aristeksystems.com",
+        href: "https://aristeksystems.com",
+      },
+    },
+    {
+      title: "iTransition",
+      techStack: [
+        "Ruby on Rails",
+        "Elasticsearch",
+        "GraphQL",
+        "MySQL",
+        "Docker",
+        "Kafka",
+        "AWS ECS",
+        "CI/CD",
+      ],
+      description:
+        "Enterprise-scale systems. Migrated DB to Elasticsearch, integrated Kafka for microservices, added GraphQL endpoints, and optimized CI tests 5x faster.",
+      link: {
+        label: "itransition.com",
+        href: "https://itransition.com",
       },
     },
   ],

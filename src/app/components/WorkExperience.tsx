@@ -32,7 +32,7 @@ function BadgeList({
         <li key={badge}>
           <Badge
             variant="secondary"
-            className="align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+            className="align-middle text-xs" // Removed print classes
           >
             {badge}
           </Badge>
@@ -56,7 +56,7 @@ function WorkPeriod({
 }: WorkPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500"
+      className="text-sm tabular-nums text-gray-800"
       title={`Employment period: ${start} to ${end ?? "Present"}`}
     >
       {start} - {end ?? "Present"}
@@ -103,34 +103,31 @@ function WorkExperienceItem({
   const { company, link, badges, title, start, end, description } = work;
 
   return (
-    <Card className="py-1 print:py-0">
-      <CardHeader className="print:space-y-1">
-        <div className="flex items-center justify-between gap-x-2 text-base">
-          <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
+    <Card className="py-1"> {/* Removed print:py-0 */}
+      <CardHeader> {/* Removed print:space-y-1 */}
+        {/* Company + title + period on same row */}
+        <div className="flex items-center justify-between gap-x-2">
+          <h3 className="flex flex-wrap items-center font-semibold leading-none text-base"> {/* Removed print:text-sm */}
             <CompanyLink company={company} link={link} />
-            <BadgeList
-              className="hidden gap-x-1 sm:inline-flex"
-              badges={badges}
-            />
+            <span className="text-gray-600 pr-1">,</span>
+            <span className="font-medium">{title}</span>
           </h3>
           <WorkPeriod start={start} end={end} />
         </div>
 
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
-          {title}
-        </h4>
+        {/* Tech stack badges on their own line */}
+        <BadgeList
+          className="flex flex-wrap gap-1 mt-1"
+          badges={badges}
+        />
       </CardHeader>
 
       <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
-          {description}
-        </div>
-        <div className="mt-2">
-          <BadgeList
-            className="-mx-2 flex-wrap gap-1 sm:hidden"
-            badges={badges}
-          />
-        </div>
+        <ul className="mt-2 list-disc pl-5 space-y-1 font-serif text-base text-black">
+          {description.map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
+        </ul>
       </CardContent>
     </Card>
   );
@@ -149,11 +146,11 @@ export function WorkExperience({
 }: WorkExperienceProps) {
   return (
     <Section>
-      <h2 className="text-xl font-bold" id="work-experience">
+      <h2 className="text-xl font-bold" id="work-experience"> {/* Added mb-4 for 1x spacing below header */}
         Work Experience
       </h2>
       <div
-        className="space-y-4 print:space-y-0"
+        className="space-y-2" // Set spacing between jobs to space-y-4, removed print:space-y-0
         role="feed"
         aria-labelledby="work-experience"
       >

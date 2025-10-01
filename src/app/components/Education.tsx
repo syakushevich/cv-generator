@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Section } from "@/components/ui/section";
+import { Card, CardContent, CardHeader } from "../../components/ui/card";
+import { Section } from "../../components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
 
 type Education = (typeof RESUME_DATA)["education"][number];
@@ -16,7 +16,7 @@ interface EducationPeriodProps {
 function EducationPeriod({ start, end }: EducationPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500"
+      className="text-sm tabular-nums text-gray-800"
       title={`Period: ${start} to ${end}`}
     >
       {start} - {end}
@@ -48,7 +48,7 @@ function EducationItem({ education }: EducationItemProps) {
         </div>
       </CardHeader>
       <CardContent
-        className="mt-2 text-foreground/80 print:text-[12px]"
+        className="mt-2 font-serif text-base text-black"
         aria-labelledby={`education-${school
           .toLowerCase()
           .replace(/\s+/g, "-")}`}
@@ -69,7 +69,7 @@ interface EducationListProps {
  */
 export function Education({ education }: EducationListProps) {
   return (
-    <Section>
+    <Section className="font-sans">
       <h2 className="text-xl font-bold" id="education-section">
         Education
       </h2>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { Section } from "@/components/ui/section";
+import { Badge } from "../../components/ui/badge";
+import { Section } from "../../components/ui/section";
 import { cn } from "@/lib/utils";
 
 type Skills = readonly string[];
@@ -21,7 +21,11 @@ function SkillsList({ skills, className }: SkillsListProps) {
     >
       {skills.map((skill) => (
         <li key={skill}>
-          <Badge className="print:text-[10px]" aria-label={`Skill: ${skill}`}>
+          <Badge
+            variant="secondary"
+            className="align-middle text-xs"
+            aria-label={`Skill: ${skill}`}
+          >
             {skill}
           </Badge>
         </li>

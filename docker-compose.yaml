@@ -1,10 +1,16 @@
-version: '3.8'
-
 services:
   app:
     build: .
     ports:
       - '3000:3000'
     environment:
-      - NODE_ENV=production
-    restart: unless-stopped
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+      - NODE_ENV=development
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - ./tailwind.config.js:/app/tailwind.config.js
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./next.config.js:/app/next.config.js
+      - /app/node_modules

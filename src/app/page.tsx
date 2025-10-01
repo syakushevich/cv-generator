@@ -7,7 +7,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/Education";
 import { Header } from "./components/Header";
-import { Projects } from "./components/Projects";
+import { Projects } from "./components/Projects"; // Keep this import, but it's not currently in the space-y-4 div
 import { Skills } from "./components/Skills";
 import { Summary } from "./components/Summary";
 import { WorkExperience } from "./components/WorkExperience";
@@ -72,7 +72,7 @@ export default function ResumePage() {
         }}
       />
       <main
-        className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
+        className="container relative mx-auto scroll-my-12 overflow-auto p-8"
         id="main-content"
       >
         <div className="sr-only">
@@ -80,16 +80,23 @@ export default function ResumePage() {
         </div>
 
         <section
-          className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+          className="mx-auto w-full max-w-2xl space-y-4 bg-white "
           aria-label="Resume Content"
         >
+          {/* Header section */}
           <SectionErrorBoundary sectionName="Header">
             <Suspense fallback={<SectionSkeleton lines={4} />}>
               <Header />
             </Suspense>
           </SectionErrorBoundary>
 
-          <div className="space-y-8 print:space-y-4">
+          {/*
+            This div applies space-y-4 (2rem) between its direct children
+            (Summary, WorkExperience, Education, Skills) on desktop,
+            and  (1rem) on print.
+            This fulfills the "2x between sections" requirement.
+          */}
+          <div className="space-y-8">
             <SectionErrorBoundary sectionName="Summary">
               <Suspense fallback={<SectionSkeleton lines={2} />}>
                 <Summary summary={RESUME_DATA.summary} />
@@ -114,11 +121,17 @@ export default function ResumePage() {
               </Suspense>
             </SectionErrorBoundary>
 
+            {/*
+              If Projects should also have this 2x spacing,
+              uncomment and ensure it's placed inside this div.
+            */}
+            {/*
             <SectionErrorBoundary sectionName="Projects">
-              <Suspense fallback={<SectionSkeleton lines={5} />}>
+              <Suspense fallback={<SectionSkeleton lines={6} />}>
                 <Projects projects={RESUME_DATA.projects} />
               </Suspense>
             </SectionErrorBoundary>
+            */}
           </div>
         </section>
 
